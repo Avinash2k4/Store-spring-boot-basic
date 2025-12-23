@@ -1,121 +1,115 @@
-🚀 Spring Boot Maven Application
-📌 Overview
+# Store Spring Boot Basic
 
-This repository contains a Spring Boot application built using Apache Maven.
-The project follows standard Maven conventions and includes the Maven Wrapper, ensuring easy setup without requiring Maven to be installed globally.
+A minimal Spring Boot starter project using Maven — preconfigured with the Maven Wrapper to make it easy to build and run locally.
 
-🛠️ Tech Stack
+## Table of Contents
 
-Java
+- [Overview](#overview)
+- [Features](#features)
+- [Tech stack](#tech-stack)
+- [Prerequisites](#prerequisites)
+- [Run locally](#run-locally)
+- [Build](#build)
+- [Tests](#tests)
+- [Project structure](#project-structure)
+- [Configuration](#configuration)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [Author](#author)
+- [License](#license)
 
-Spring Boot
+## Overview
 
-Apache Maven
+This repository contains a lightweight Spring Boot application set up using Apache Maven and the Maven Wrapper. It is intended as a simple starting point for building REST APIs, experimenting with Spring Boot features, or teaching core concepts.
 
-Maven Wrapper
+## Features
 
-Git
+- Spring Boot application starter
+- Maven Wrapper included (no global Maven required)
+- Ready to build into an executable JAR
+- Placeholder for adding REST endpoints, persistence, and security
 
-📂 Project Structure
-.
-├── .mvn/
-│   └── wrapper/
-│       └── maven-wrapper.jar
-├── mvnw
-├── mvnw.cmd
-├── pom.xml
-├── .gitignore
-├── .gitattributes
-├── HELP.md
-└── target/ (generated after build)
+## Tech stack
 
-Important Files
+- Java (JDK 17+ recommended)
+- Spring Boot
+- Maven
+- Maven Wrapper
 
-pom.xml – Manages dependencies, plugins, and build configuration
+## Prerequisites
 
-mvnw / mvnw.cmd – Maven Wrapper scripts (Linux/macOS & Windows)
+- Java JDK 17 or newer
+- Git
+- (Optional) Docker — if you plan to add containerization later
 
-.gitignore – Prevents unnecessary files from being committed
+## Run locally
 
-HELP.md – Reference documentation for Maven and Spring Boot
+1. Clone the repository
 
-⚙️ Prerequisites
+   git clone https://github.com/Avinash2k4/Store-spring-boot-basic.git
+   cd Store-spring-boot-basic
 
-Java JDK 17+
+2. Run with Maven Wrapper
 
-Git
+   Linux / macOS
+   ./mvnw spring-boot:run
 
-✅ Maven installation is not required (Maven Wrapper is included)
+   Windows
+   mvnw.cmd spring-boot:run
 
-▶️ How to Run the Project
-Clone the Repository
-git clone <repository-url>
-cd <project-folder>
+3. Open http://localhost:8080 (or the port configured in application.properties)
 
-Build the Project
+## Build
 
-Windows
-
-mvnw.cmd clean install
-
+Build an executable JAR using the wrapper:
 
 Linux / macOS
+./mvnw clean package
 
-./mvnw clean install
+Windows
+mvnw.cmd clean package
 
-Run the Application
-./mvnw spring-boot:run
-
-
-or
+Run the generated JAR:
 
 java -jar target/*.jar
 
-🧪 Run Tests
+## Tests
+
+Execute unit tests with:
+
 ./mvnw test
 
-📦 Build Output
+## Project structure
 
-After a successful build:
+.  
+├── .mvn/                      # Maven wrapper files
+├── mvnw, mvnw.cmd             # Maven wrapper scripts
+├── pom.xml                    # Maven configuration
+├── src/main/java/             # Application source
+├── src/main/resources/        # Application resources (application.properties)
+└── target/                    # Build output (generated)
 
-Compiled files → target/classes
+## Configuration
 
-Executable JAR → target/
+Edit src/main/resources/application.properties (or application.yml) to change server port, datasource settings and other properties.
 
-🧾 Maven Parent Overrides
+## Roadmap
 
-The project disables inherited metadata like:
+Planned enhancements:
 
-<license>
+- Add sample REST endpoints for a store (products, orders, customers)
+- Integrate with a database (H2 / MySQL / PostgreSQL)
+- Add Spring Security for authentication and authorization
+- Containerize with Docker
 
-<developers>
+## Contributing
 
-This avoids unwanted parent POM inheritance.
-You can remove these overrides if inheritance is needed.
+Contributions are welcome. Please open an issue or submit a pull request describing your changes.
 
-📚 Useful References
+## Author
 
-Apache Maven Documentation
+Avinash P — Aspiring Software Engineer
 
-Spring Boot Maven Plugin Guide
+## License
 
-Spring Boot OCI Image Creation
-
-(Links available in HELP.md)
-
-🚧 Future Enhancements
-
-REST API development
-
-Database integration (MySQL / PostgreSQL)
-
-Spring Security
-
-Docker support
-
-Cloud deployment
-
-👤 Author
-
-Avinash P
-Aspiring Software Engineer | Interested in Cloud & Backend Development
+This project is provided under the MIT License. See LICENSE for details.
